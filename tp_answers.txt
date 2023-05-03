@@ -1,0 +1,32 @@
+mutation {
+  addUser(name: "test", email: "test@test.com", password: "123456") {
+    id
+    name
+    email
+  }
+}
+query {
+  users {
+    id
+    name
+    email
+  }
+}
+mutation {
+  updateUser(id: 1, name: "test2", email: "test2@test.com" , password : "1234") {
+    id
+    name
+    email
+    password
+  }
+}
+{
+  "data": {
+    "deleteUser": {
+      "id": 1,
+      "name": "test2",
+      "email": "test2@test.com",
+      "password": "1234"
+    }
+  }
+}
